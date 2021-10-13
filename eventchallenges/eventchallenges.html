@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Challenges: Challenge 22-30</title>
+    <!-- Challenge 28
+        <style>
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(255, 0, 0);
+            transition: all 2s;
+        }
+
+        .big{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(0, 0, 255);
+            transition: all 2s;
+        }
+    </style> -->
+
+     Challenge 29
+        <style>
+        body {height: 3000px;}
+        .one {background-color: beige; transition: all 3s;}
+        .two {background-color: blueviolet; transition: all 3s;}
+        .three {background-color: coral; transition: all 3s;}
+        .four {background-color: cornflowerblue; transition: all 3s;}
+        .five {background-color: darkgoldenrod; transition: all 3s;}
+    </style>
+
+    Challenge 30
+    <!-- <style>
+        .one {background-color: beige; transition: all 3s;}
+        .two {background-color: blueviolet; transition: all 3s;}
+        .three {background-color: coral; transition: all 3s;}
+        .four {background-color: cornflowerblue; transition: all 3s;}
+        .five {background-color: darkgoldenrod; transition: all 3s;}
+    </style>  -->
+</head>
+<body class='one'> <!-- on Chellenge 29+ 30, the body tag is given a class attribute. -->
+
+    <!-- Challenge 22 
+    <h1>JavaScript Event Challenges: Challenge 22</h1>
+    <p>Here is a paragraph of text</p>
+    <button>Turn Green Dammit!</button>  -->
+
+     <!-- Challenge 23
+     <h1>JavaScript Event Challenges: Challenge 23</h1>
+     <p>Here is a paragraph of text</p>
+     <p>Here is another paragraph of text</p>
+     <p>Aaaaand another</p>
+     <p>Guess what? yes. another one.</p>
+     <button>Turn Green Dammit!</button> -->
+
+    <!--  Challenge 24+ 25
+     <h1>JavaScript Event Challenges: Challenge 24+25</h1>
+     <div>
+         <p>Here is a paragraph of text</p>
+     </div>
+     <button>Add a paragraph</button>
+     <button>Remove paragraph</button> -->
+
+     <!--  Challenge 26
+     <h1>JavaScript Event Challenges: Challenge 26</h1>
+     <div>
+        <p>This is paragraph number 1</p>
+    </div>
+    <button>Add a paragraph</button>
+    <button>Remove paragraph</button>
+    <button>Number of paragraphs</button>  -->
+
+    <!-- Challenge 27
+     <h1>JavaScript Event Challenges: Challenge 27</h1>
+     <form>
+         <label>Enter a number <input type="text"></label>
+         <input type="submit" value="send number">
+     </form> -->
+     
+     <!-- Challenge 28
+     <h1>JavaScript Event Challenges: Challenge 28</h1>
+     <div></div> -->
+
+     Challenge 29
+     <h1>JavaScript Event Challenges: Challenge 29</h1>
+     <p>Scroll Down!</p>
+
+     <!-- Challenge 30
+     <h1>JavaScript Event Challenges: Challenge 30</h1>
+     <p>Press the B key to turn the page beige</p>
+     <p>Press the V key to turn the page blueviolet</p>
+     <p>Press the C key to turn the page coral</p>
+     <p>Press the F key to turn the page cornflowerblue</p>
+     <p>Press the G key to turn the page darkgoldenrod</p> -->
+
+    <script>
+        //Challenge 22 
+       /* var btn= document.querySelector('button');
+        var myText= document.querySelector('p');
+       
+        btn.addEventListener('click', function(){
+            myText.style.color= 'green';
+        })   */
+        
+        //Challenge 23
+      /*   var btn= document.querySelector('button');
+        var myText= document.querySelectorAll('p');
+       
+        btn.addEventListener('click', function(){
+            for(var i=0; i<myText.length; i++){
+                myText[i].style.color= 'green';
+            }
+            
+        }) */
+
+
+        //Challenge 24 + 25
+     /*    var AddBtn= document.querySelectorAll('button')[0];
+        var DelBtn= document.querySelectorAll('button')[1];
+        var myDiv= document.querySelector('div');
+
+        AddBtn.addEventListener('click', function(){
+            var newPara= document.createElement('p');
+            var newPT= document.createTextNode('A new paragraph');
+            newPara.appendChild(newPT);
+            myDiv.appendChild(newPara);
+        });
+
+        DelBtn.addEventListener('click', function(){
+            var Ps= document.querySelectorAll('p');
+            myDiv.removeChild(myDiv.children[Ps.length-1]);
+        }) */
+
+        //Challenge 26
+       /*  var AddBtn= document.querySelectorAll('button')[0];
+        var DelBtn= document.querySelectorAll('button')[1];
+        var myDiv= document.querySelector('div');
+        var PrintBtn= document.querySelectorAll('button')[2];
+
+        PrintBtn.addEventListener('click', function(){
+           // console.log(myDiv.childNodes.length); 
+            console.log(myDiv.children.length);
+        })
+
+        AddBtn.addEventListener('click', function(){
+            var Ps= document.querySelectorAll('p')
+            var newPara= document.createElement('p');
+            var newPT= document.createTextNode(`This is paragraph number ${Ps.length+1}`);
+            newPara.appendChild(newPT);
+            myDiv.appendChild(newPara);
+        });
+
+        DelBtn.addEventListener('click', function(){
+            if (myDiv.children.length ==1){
+                alert("Don't delete the last paragraph!");
+            }
+          
+            else{
+            var Ps= document.querySelectorAll('p');
+            myDiv.removeChild(myDiv.children[Ps.length-1]);}
+        })  */
+
+        //Challenge 27
+       /*  var myForm= document.querySelector('form');
+        var myH= document.querySelector('h1');
+
+        myForm.addEventListener('submit', function(evt){
+            evt.preventDefault();
+
+            var myNum= parseInt(document.querySelector('input').value);
+            
+            if (myNum){
+                myH.style.fontSize= myNum + 'px';
+            }
+            else{
+                alert('please enter a number!');
+            } 
+
+        }); */
+
+        //Challenge 28
+       /*  var myDiv= document.querySelector('div');
+
+        myDiv.addEventListener('mouseover', function(){
+            myDiv.className= 'big';
+        });
+
+        myDiv.addEventListener('mouseout', function(){
+            myDiv.removeAttribute('class');
+        }); */
+
+        //Challenge 29
+        var pagetop;
+        var myBody= document.querySelector('body');
+        window.addEventListener('scroll', function(){
+            pagetop= window.pageYOffset;
+            
+            switch(true){
+                case pagetop<500: myBody.className= 'one';break;
+                case pagetop<1000: myBody.className= 'two';break;
+                case pagetop<1500: myBody.className= 'three';break;
+                case pagetop<2000: myBody.className= 'four';break;
+                default: myBody.className= 'five';
+            };
+        }); 
+
+        //Challenge 30
+        /* var myKey;
+        var myBody= document.querySelector('body');
+        window.addEventListener('keydown', function(event){
+            myKey= event.which;
+             switch(myKey){
+                case 66: myBody.className= 'one';break;
+                case 86: myBody.className= 'two';break;
+                case 67: myBody.className= 'three';break;
+                case 70: myBody.className= 'four';break;
+                case 71: myBody.className= 'five';break;
+               default: alert('HEY! NO CHEATING U DONKEY!');
+            };
+        }); */
+
+    </script>
+</body>
+</html>
